@@ -273,13 +273,7 @@ footer{text-align:center;color:var(--mist-dim);font-family:var(--label);
         <stop offset="0" stop-color="#3F9DAE" stop-opacity=".35"/>
         <stop offset="1" stop-color="#E2703A" stop-opacity=".25"/>
       </linearGradient>
-      <linearGradient id="seaFill" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#3F9DAE" stop-opacity="0"/>
-        <stop offset=".30" stop-color="#357E8E" stop-opacity=".34"/>
-        <stop offset="1" stop-color="#0F2839" stop-opacity=".92"/>
-      </linearGradient>
     </defs>
-    <path id="wave1fill" fill="url(#seaFill)" stroke="none"/>
     <path id="wave1b" fill="none" stroke="url(#g1b)" stroke-width="1.4"/>
     <path id="wave1a" fill="none" stroke="url(#g1)" stroke-width="2.2"/>
   </svg>
@@ -635,7 +629,6 @@ footer{text-align:center;color:var(--mist-dim);font-family:var(--label);
       color:var(--mist);max-width:27em;margin:34px auto 0;}
   </style>
   <svg class="endWave" id="wave2" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
-    <path id="wave2fill" fill="url(#seaFill)" stroke="none"/>
     <path id="wave2a" fill="none" stroke="url(#g1)" stroke-width="1.8"/>
   </svg>
   <div class="wrap">
@@ -694,15 +687,11 @@ footer{text-align:center;color:var(--mist-dim);font-family:var(--label);
   var w1a=document.getElementById('wave1a'),
       w1b=document.getElementById('wave1b'),
       w2a=document.getElementById('wave2a'),
-      w1f=document.getElementById('wave1fill'),
-      w2f=document.getElementById('wave2fill'),
       wbr=document.getElementById('bridgeWave');
 
   function draw(phase){
-    if(w1f) w1f.setAttribute('d', makeWave(1200,300,setHero,phase)+'L1200 300 L0 300 Z');
     if(w1a) w1a.setAttribute('d', makeWave(1200,300,setHero,phase));
     if(w1b) w1b.setAttribute('d', makeWave(1200,300,setHero,phase+2.1));
-    if(w2f) w2f.setAttribute('d', makeWave(1200,220,setEnd,phase*0.8)+'L1200 220 L0 220 Z');
     if(w2a) w2a.setAttribute('d', makeWave(1200,220,setEnd,phase*0.8));
     if(wbr) wbr.setAttribute('d', makeWave(560,80,setBridge,phase*1.2));
   }
