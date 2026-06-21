@@ -140,6 +140,31 @@ section{position:relative;z-index:2;}
   font-family:var(--display);font-weight:500;font-size:1.18rem;line-height:1.85;
   color:#F4EDDE;}
 .converge .resolve .glow{color:var(--dawn);}
+.converge .loop{max-width:33em;margin:0 auto 30px;}
+.converge .loop-lead{font-family:var(--display);font-weight:600;text-align:center;text-wrap:balance;
+  font-size:clamp(1.05rem,3.2vw,1.34rem);line-height:1.72;color:#F4EDDE;margin:0 0 1.15em;}
+.converge .loop-lead em{font-style:normal;color:var(--dawn);}
+.converge .loop-steps{list-style:none;margin:0 0 1.15em;padding:0;
+  border-left:1px solid rgba(157,180,194,.22);}
+.converge .loop-steps li{position:relative;padding:0 0 .85em 20px;margin:0;
+  font-family:var(--body);font-size:.92rem;line-height:1.78;color:var(--mist);text-wrap:pretty;}
+.converge .loop-steps li:last-child{padding-bottom:0;}
+.converge .loop-steps li::before{content:"";position:absolute;left:-4.5px;top:.5em;
+  width:8px;height:8px;border-radius:50%;background:var(--mist-dim);}
+.converge .loop-steps .lv{font-family:var(--label);font-size:.74rem;letter-spacing:.06em;
+  display:block;margin-bottom:.15em;}
+.converge .loop-steps .mocc{color:var(--ember);}
+.converge .loop-steps .gaku{color:var(--field);}
+.converge .loop-steps .ai{color:var(--sea-soft);}
+.converge .loop-steps q{quotes:"「" "」";font-style:normal;color:#E7DECB;}
+/* escalation : 巡るほど点が温まり、解像度が上がる */
+.converge .loop-steps li:nth-child(2)::before{background:var(--mist);}
+.converge .loop-steps li:nth-child(3)::before{background:var(--sea-soft);}
+.converge .loop-steps li:nth-child(4){color:#D9E1E6;}
+.converge .loop-steps li:nth-child(4)::before{background:var(--dawn);box-shadow:0 0 9px rgba(240,186,91,.55);}
+.converge .loop-note{font-family:var(--body);font-size:.92rem;line-height:1.95;
+  color:var(--mist);text-align:center;margin:0;text-wrap:pretty;}
+.converge .loop-note .glow{color:var(--dawn);}
 
 /* ---------- chapter B : デジハラ ---------- */
 .proj{background:linear-gradient(180deg,var(--ink) 0%, #112736 100%);
@@ -410,6 +435,16 @@ footer{text-align:center;color:var(--mist-dim);font-family:var(--label);
       </div>
     </div>
     <p class="srcnote reveal d2">実際のやりとりより（原文ママ・抜粋）</p>
+    <div class="loop reveal d2">
+      <p class="loop-lead">投げて、受けとめて、組み替えて、また投げる。<br><em>ひと巡りごとに、熱も解像度も上がっていく。</em></p>
+      <ol class="loop-steps">
+        <li><span class="lv mocc">もっちゃん</span>半ば冗談で、熱を放る。──<q>なんてね！！！</q></li>
+        <li><span class="lv ai">チャーさん（AI）</span>その“なんてね”を、未来として受け取る。──<q>いちばん未来が詰まってる</q></li>
+        <li><span class="lv gaku">塚ちゃん</span>同じ熱を、「学校」という構造へ組み替える。──デジタル原っぱ大学。</li>
+        <li><span class="lv ai">チャーさん（AI）</span>像をもう一段、上げる。──<q>“発火装置”。もっちゃんは火をつける人、塚ちゃんは火を育てる人</q></li>
+      </ol>
+      <p class="loop-note">人ふたりと、AIひとつ。三つの声で同じ谷を掘るうちに、ばらばらだった直感が、ひとつの像を結んでいく。お互いのバイブスが、<span class="glow">共鳴</span>した。</p>
+    </div>
     <p class="resolve reveal d2">打ち合わせもなく、同じ日に、<span class="glow">同じ景色</span>へ。<br>これが、すべてのはじまりの合図だった。</p>
   </div>
 </section>
